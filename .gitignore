@@ -1,0 +1,115 @@
+# =====================================================
+# Environment & Secrets
+# =====================================================
+# Never commit API keys, tokens, passwords, or secrets
+
+.env
+.env.local
+.env.*.local
+
+# =====================================================
+# Python Bytecode / Cache Files
+# =====================================================
+
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Compiled Extensions
+*.so
+*.pyd
+*.dll
+
+# Python Runtime Files
+.Python
+
+# =====================================================
+# Virtual Environments
+# =====================================================
+# Local Python environments
+
+venv/
+env/
+ENV/
+.venv/
+.virtualenv/
+
+# =====================================================
+# IDE & Editor Files
+# =====================================================
+
+.vscode/
+.idea/
+
+*.code-workspace
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# =====================================================
+# Testing & Coverage Reports
+# =====================================================
+
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# =====================================================
+# Jupyter Notebook
+# =====================================================
+
+.ipynb_checkpoints/
+
+# =====================================================
+# Build / Distribution Artifacts
+# =====================================================
+
+build/
+dist/
+*.egg-info/
+
+# =====================================================
+# Streamlit
+# =====================================================
+
+.streamlit/secrets.toml
+
+# =====================================================
+# Logs
+# =====================================================
+
+*.log
+
+# =====================================================
+# OS Generated Files
+# =====================================================
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# =====================================================
+# Model Files & Large Assets
+# =====================================================
+# Uncomment if storing local models
+
+# models/
+# checkpoints/
+# embeddings/
+# vectorstore/
+
+# =====================================================
+# LangSmith / LangChain Traces (Optional)
+# =====================================================
+
+langsmith_runs/

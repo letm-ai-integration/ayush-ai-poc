@@ -1,0 +1,13 @@
+langchain
+langchain-core
+langchain-groq
+python-dotenv
+transformers
+sentence-transformers
+streamlit
+rich
+torch
+numpy
+
+gradio
+
