@@ -1,0 +1,17 @@
+langchain
+langchain-core
+langchain-groq
+langchain-community
+langchain-huggingface
+python-dotenv
+transformers
+sentence-transformers
+rich
+torch
+numpy
+gradio
+faiss-cpu
+pypdf
+faiss-cpu
+langchain-text-splitters
+sentence-transformers
