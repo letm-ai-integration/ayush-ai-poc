@@ -1,0 +1,9 @@
+langchain
+langgraph
+langchain-groq
+langchain-community
+langchain-openai
+gradio
+python-dotenv
+wikipedia
+duckduckgo-search
