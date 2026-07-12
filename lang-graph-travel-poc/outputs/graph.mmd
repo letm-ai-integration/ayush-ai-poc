@@ -1,0 +1,37 @@
+---
+config:
+  flowchart:
+    curve: linear
+---
+graph TD;
+	__start__([<p>__start__</p>]):::first
+	preference_parser(preference_parser)
+	destination_researcher(destination_researcher)
+	human_select_destination(human_select_destination<hr/><small><em>__interrupt = before</em></small>)
+	flight_finder(flight_finder)
+	accommodation_scout(accommodation_scout)
+	activity_planner(activity_planner)
+	weather_advisor(weather_advisor)
+	budget_calculator(budget_calculator)
+	human_approve_budget(human_approve_budget<hr/><small><em>__interrupt = before</em></small>)
+	itinerary_compiler(itinerary_compiler)
+	__end__([<p>__end__</p>]):::last
+	__start__ --> preference_parser;
+	accommodation_scout --> budget_calculator;
+	activity_planner --> budget_calculator;
+	budget_calculator -. &nbsp;needs_human_review&nbsp; .-> human_approve_budget;
+	budget_calculator -. &nbsp;approved&nbsp; .-> itinerary_compiler;
+	destination_researcher --> human_select_destination;
+	flight_finder --> budget_calculator;
+	human_approve_budget -. &nbsp;optimize&nbsp; .-> activity_planner;
+	human_approve_budget -. &nbsp;approved&nbsp; .-> itinerary_compiler;
+	human_select_destination -.-> accommodation_scout;
+	human_select_destination -.-> activity_planner;
+	human_select_destination -.-> flight_finder;
+	human_select_destination -.-> weather_advisor;
+	preference_parser --> destination_researcher;
+	weather_advisor --> budget_calculator;
+	itinerary_compiler --> __end__;
+	classDef default fill:#f2f0ff,line-height:1.2
+	classDef first fill-opacity:0
+	classDef last fill:#bfb6fc
